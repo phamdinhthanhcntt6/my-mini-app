@@ -1,19 +1,6 @@
-import React, { Suspense } from "react";
-import { List, Page, Icon, useNavigate } from "zmp-ui";
 import UserCard from "components/user-card";
-import { getUserID } from "zmp-sdk/apis";
-
-getUserID({
-  success: (data) => {
-    // xử lý khi gọi api thành công
-    const userID = data;
-    console.log(userID);
-  },
-  fail: (error) => {
-    // xử lý khi gọi api thất bại
-    console.log(error);
-  },
-});
+import React, { Suspense } from "react";
+import { Icon, List, Page, useNavigate } from "zmp-ui";
 
 const HomePage = () => {
   const navigate = useNavigate();
